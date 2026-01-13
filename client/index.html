@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Zirk – Luxury Living</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-flex">
+
+    <img src="./images/logo/logo.png" class="logo-img" alt="The Zirk Logo" />
+
+    <div class="header-actions">
+      <button class="menu-btn" id="menuBtn">
+        <img src="./images/icons/menu.png" alt="Menu" />
+      </button>
+
+      <a href="tel:+917901810050" class="phone-btn">
+        <img src="./images/icons/phone.png" alt="Call" />
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<!-- DROPDOWN MENU -->
+<div class="dropdown-menu" id="dropdownMenu">
+  <a href="#home">Home</a>
+  <a href="#overview">Overview</a>
+  <a href="#plans">Floor Plans</a>
+  <a href="#amenities">Amenities</a>
+  <a href="#features">Features</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-slider">
+    <img src="./images/bg/hero1.jpg" class="hero-img active" />
+    <img src="./images/bg/hero2.jpg" class="hero-img" />
+    <img src="./images/bg/hero3.jpg" class="hero-img" />
+  </div>
+
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>The Zirk</h1>
+      <p>Smart Luxury 3 & 3+Servant BHK Apartments – Zirakpur</p>
+      <button onclick="scrollToContact()">Schedule Site Visit</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact2">
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <p>Phone: +91 79018-10050</p>
+
+    <form class="contact-form">
+      <input type="text" id="nameInput" placeholder="Full Name" required />
+      <input type="tel" placeholder="Phone Number" required />
+       <input type="tel" placeholder="WhatsApp Number" required />
+
+      <button type="submit">Request Call Back</button>
+    </form>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="overview" id="overview">
+  <div class="container">
+    <h2>The Zirk Project</h2>
+    <p>
+      Premium smart-living residences with modern architecture, automation,
+      and world-class amenities in Zirakpur.
+    </p>
+
+    <div class="overview-stats">
+      <div><h3>3 & 3+Servant</h3><span>BHK Homes</span></div>
+      <div><h3>4 Acres</h3><span>Green Living</span></div>
+      <div><h3>Prime</h3><span>Location</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOOR PLANS -->
+<section class="floor-plans" id="plans">
+  <div class="container">
+    <h2>House Plans</h2>
+
+    <div class="plan-card">
+      <img src="./images/plans/3bhk.jpg" />
+      <h3>3 BHK Flats</h3>
+      <p>Area: 1750 – 1990 Sq.Ft.</p>
+      <p>Structure: G+32</p>
+      <button>Price & More Details</button>
+    </div>
+
+    <div class="plan-card">
+      <img src="./images/plans/3servant.jpg" />
+      <h3>3 BHK + Servant Room</h3>
+      <p>Area: 2290 Sq.Ft.</p>
+      <p>Structure: G+32</p>
+      <button>Price & More Details</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- AMENITIES POINTS -->
+<section class="amenities-points" id="amenities">
+  <div class="container">
+    <h2>Amenities</h2>
+
+    <ul class="amenities-list">
+      <li>65,000 Sq.Ft. Club House</li>
+      <li>World Class Luxury Spa</li>
+      <li>EV Charging Stations</li>
+      <li>All Weather Swimming Pool</li>
+      <li>Multipurpose Party Hall</li>
+    </ul>
+  </div>
+</section>
+
+<!-- AMENITIES IMAGE SLIDER -->
+<section class="amenities-slider">
+  <img src="./images/amenities/a1.jpg" class="amenity-img active" />
+  <img src="./images/amenities/a2.jpg" class="amenity-img" />
+  <img src="./images/amenities/a3.jpg" class="amenity-img" />
+  <img src="./images/amenities/a4.jpg" class="amenity-img" />
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+    <h2>Smart Living Features</h2>
+
+    <div class="features-list">
+      <div class="feature-card">
+        <h4>Voice Control</h4>
+        <p>Control lights and appliances with voice commands.</p>
+      </div>
+
+      <div class="feature-card">
+        <h4>Motion Sensors</h4>
+        <p>Smart lighting & security with motion detection.</p>
+      </div>
+
+      <div class="feature-card">
+        <h4>Mobile App</h4>
+        <p>Control your home from anywhere using the app.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <p>Phone: +91 79018-10050</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <input type="tel" placeholder="WhatsApp Number" required />
+      <button type="submit">Request Call Back</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 The Zirk. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
