@@ -26,7 +26,7 @@ menuBtn.addEventListener("click", () => {
   dropdownMenu.classList.toggle("show");
 });
 function scrollToContact() {
-  const section = document.getElementById("contact2");
+  const section = document.getElementById("contact");
   const nameInput = document.getElementById("name");
   const offset = 64;
 
@@ -45,6 +45,17 @@ function scrollToContact() {
 
 
 
+function showThankYou() {
+  setTimeout(() => {
+    document.getElementById("thankYouPopup").style.display = "flex";
+     const forms = document.querySelectorAll(".contact-form");
+    forms.forEach(form => form.reset());
+  }, 500);
+}
+
+function closePopup() {
+  document.getElementById("thankYouPopup").style.display = "none";
+}
 
 
 

@@ -8,6 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
 </head>
+<div class="thank-you-popup" id="thankYouPopup">
+  <div class="popup-box">
+    <h3>Thank You!</h3>
+    <p>Our team will connect with you soon.</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
 <!-- WHATSAPP FLOAT BUTTON -->
 <!-- WHATSAPP FLOAT CHAT -->
 <div class="whatsapp-chat">
@@ -75,23 +83,28 @@
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact2">
+<section class="contact" id="contact">
   <div class="container">
     <h2>Get In Touch</h2>
     <p>Phone: +91 79018-10050</p>
 
-     <form 
+    <form 
   class="contact-form"
   action="https://script.google.com/macros/s/AKfycbyA7Vqy0PXpA0r3kiLCV2M_tUaQpCYQXD3rcWjpgobzTg2mVDkdR1tZfeABuOMbGQMtvA/exec"
   method="POST"
-  target="_blank"
+  target="hidden_iframe"
+  onsubmit="showThankYou()"
 >
-  <input type="text" name="name" id="name" placeholder="Full Name" required />
-  <input type="tel" name="phone" id="phone" placeholder="Phone Number" required />
-  <input type="tel" name="whatsapp" id="whatsapp" placeholder="WhatsApp Number" required />
+  <input type="text" name="name" placeholder="Full Name" required />
+  <input type="tel" name="phone" placeholder="Phone Number" required />
+  <input type="tel" name="whatsapp" placeholder="WhatsApp Number" required />
 
   <button type="submit">Request Call Back</button>
 </form>
+
+<!-- Hidden iframe -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 
   </div>
 </section>
@@ -194,14 +207,19 @@
   class="contact-form"
   action="https://script.google.com/macros/s/AKfycbyA7Vqy0PXpA0r3kiLCV2M_tUaQpCYQXD3rcWjpgobzTg2mVDkdR1tZfeABuOMbGQMtvA/exec"
   method="POST"
-  target="_blank"
+  target="hidden_iframe"
+  onsubmit="showThankYou()"
 >
-  <input type="text" name="name" id="name" placeholder="Full Name" required />
-  <input type="tel" name="phone" id="phone" placeholder="Phone Number" required />
-  <input type="tel" name="whatsapp" id="whatsapp" placeholder="WhatsApp Number" required />
+  <input type="text" name="name" placeholder="Full Name" required />
+  <input type="tel" name="phone" placeholder="Phone Number" required />
+  <input type="tel" name="whatsapp" placeholder="WhatsApp Number" required />
 
   <button type="submit">Request Call Back</button>
 </form>
+
+<!-- Hidden iframe -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 
   </div>
 </section>
