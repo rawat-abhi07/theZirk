@@ -2,12 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 body {
-  background: #0B0B0B;
-  color: #F5F5F5;
+  background: #0E0E10;
+  color: #F2F2F2;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .container {
@@ -22,7 +24,7 @@ body {
   top: 0;
   width: 100%;
   height: 64px;
-  background: #0B0B0B;
+  background: #0E0E10;
   z-index: 10;
 }
 
@@ -59,7 +61,7 @@ body {
   position: fixed;
   top: 64px;
   right: 10px;
-  background: #1A1A1A;
+  background: #151518;
   width: 200px;
   display: none;
   flex-direction: column;
@@ -68,14 +70,16 @@ body {
 }
 
 .dropdown-menu a {
+  font-size: 15px;
+  font-weight: 500;
   padding: 12px;
   text-decoration: none;
-  color: #F5F5F5;
-  border-bottom: 1px solid #333;
+  color: #F2F2F2;
+  border-bottom: 1px solid #2A2A2A;
 }
 
 .dropdown-menu a:hover {
-  background: #C9A24D;
+  background: #D4AF37;
   color: #000;
 }
 
@@ -107,23 +111,30 @@ body {
 .hero-overlay {
   position: relative;
   height: 100%;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0,0,0,0.7);
   display: flex;
   align-items: flex-end;
 }
 
 .hero-content {
-  color: #F5F5F5;
+  color: #F2F2F2;
   padding: 60px;
 }
 
 .hero-content h1 {
-  font-size: 42px;
-  color: #C9A24D;
+  font-family: 'Poppins', sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  color: #D4AF37;
 }
-
+.hero-content p {
+  font-size: 18px;
+  margin-top: 8px;
+}
 .hero-content button {
-  background-color: #C9A24D;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #D4AF37;
   color: #000;
   border: none;
   padding: 10px 18px;
@@ -136,18 +147,33 @@ body {
 .overview {
   padding: 70px 0;
   text-align: center;
-  background: #111;
+  background: #151518;
+}
+.overview h2,
+.floor-plans h2,
+.amenities-points h2,
+.features h2,
+.contact h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.overview p {
+  font-size: 17px;
+  max-width: 700px;
+  margin: auto;
 }
 
 /* FLOOR PLANS */
 .floor-plans {
   padding: 70px 0;
   text-align: center;
-  background: #0B0B0B;
+  background: #0E0E10;
 }
 
 .plan-card {
-  background: #FFFFFF;
+  background: #FAFAFA;
   padding: 20px;
   margin-bottom: 30px;
   color: #000;
@@ -161,11 +187,20 @@ body {
 }
 
 .plan-card h3 {
-  color: #111;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+   color: #111;
+}
+.plan-card p {
+  font-size: 15px;
 }
 
 .plan-card button {
-  background-color: #C9A24D;
+    font-size: 15px;
+  font-weight: 600;
+
+  background-color: #D4AF37;
   color: #000;
   border: none;
   padding: 8px 14px;
@@ -176,7 +211,7 @@ body {
 /* AMENITIES */
 .amenities-points {
   padding: 70px 0;
-  background: #111;
+  background: #151518;
 }
 
 .amenities-list {
@@ -185,9 +220,17 @@ body {
 
 .amenities-list li {
   padding: 10px 0;
-  border-bottom: 1px solid #333;
+  font-size: 16px;
+  border-bottom: 1px solid #2A2A2A;
 }
-
+.feature-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.feature-card p {
+  font-size: 15px;
+}
 /* AMENITIES SLIDER */
 .amenities-slider {
   height: 250px;
@@ -211,14 +254,21 @@ body {
 /* FEATURES */
 .features {
   padding: 70px 0;
-  background: #F2F2F2;
+  background: #F3F3F3;
   color: #000;
   text-align: center;
 }
-
+.feature-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
 .features-list {
   display: flex;
   gap: 20px;
+}
+.feature-card p {
+  font-size: 15px;
 }
 
 .feature-card {
@@ -230,25 +280,28 @@ body {
 /* CONTACT */
 .contact {
   padding: 70px 0;
-  background: #0B0B0B;
-  color: #F5F5F5;
+  background: #0E0E10;
+  color: #F2F2F2;
   text-align: center;
 }
 
 .contact-form input {
+    font-size: 15px;
   width: 100%;
   padding: 12px;
   margin-top: 10px;
-  background: #1A1A1A;
+  background: #151518;
   color: #FFF;
-  border: 1px solid #333;
+  border: 1px solid #2A2A2A;
 }
 
 .contact-form button {
+     font-size: 16px;
+  font-weight: 600;
   width: 100%;
   padding: 12px;
   margin-top: 10px;
-  background: #C9A24D;
+  background: #D4AF37;
   color: #000;
   font-weight: bold;
   border: none;
@@ -257,7 +310,10 @@ body {
 
 /* FOOTER */
 .footer {
-  background: #0B0B0B;
+    
+  font-size: 14px;
+
+  background: #0E0E10;
   color: #AAA;
   text-align: center;
   padding: 15px;
