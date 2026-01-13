@@ -27,7 +27,7 @@ menuBtn.addEventListener("click", () => {
 });
 function scrollToContact() {
   const section = document.getElementById("contact2");
-  const nameInput = document.getElementById("nameInput");
+  const nameInput = document.getElementById("name");
   const offset = 64;
 
   const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
