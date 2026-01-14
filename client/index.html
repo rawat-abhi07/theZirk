@@ -2,232 +2,237 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>The Zirk – Luxury Living</title>
+  <title>The Zirk | Luxury Smart Apartments Zirakpur</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<body>
+
 <div class="thank-you-popup" id="thankYouPopup">
   <div class="popup-box">
-    <h3>Thank You!</h3>
-    <p>Our team will connect with you soon.</p>
+    <h3>Request Received</h3>
+    <p>Our luxury consultant will connect with you shortly.</p>
     <button onclick="closePopup()">OK</button>
   </div>
 </div>
 
-<!-- WHATSAPP FLOAT BUTTON -->
-<!-- WHATSAPP FLOAT CHAT -->
 <div class="whatsapp-chat">
-  <div class="chat-bubble">
-    <span>May I help you?</span>
-  </div>
-
-  <a 
-    href="https://api.whatsapp.com/send?phone=917901810050&text=Can%20I%20know%20more%20about%20The%20Zirk%20project%3F"
-    target="_blank"
-    class="whatsapp-btn"
-    aria-label="Chat on WhatsApp"
-  >
+  <div class="chat-bubble"><span>Get Price List</span></div>
+  <a href="https://api.whatsapp.com/send?phone=917901810050&text=Can%20I%20know%20more%20about%20The%20Zirk%3F" target="_blank" class="whatsapp-btn">
     <img src="./images/icons/whatsapp.png" alt="WhatsApp" />
   </a>
 </div>
 
-
-<body>
-
-<!-- HEADER -->
 <header class="header">
   <div class="container header-flex">
-
     <img src="./images/logo/logo.png" class="logo-img" alt="The Zirk Logo" />
-
+    
     <div class="header-actions">
-      <button class="menu-btn" id="menuBtn">
+      <a href="tel:+917901810050" class="phone-link" aria-label="Call Now">
+        <img src="./images/icons/phone.png" alt="Call" />
+        <span class="phone-text">+91 79018-10050</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
         <img src="./images/icons/menu.png" alt="Menu" />
       </button>
-
-      <a href="tel:+917901810050" class="phone-btn">
-        <img src="./images/icons/phone.png" alt="Call" />
-      </a>
     </div>
-
   </div>
 </header>
 
-<!-- DROPDOWN MENU -->
 <div class="dropdown-menu" id="dropdownMenu">
   <a href="#home">Home</a>
   <a href="#overview">Overview</a>
   <a href="#plans">Floor Plans</a>
   <a href="#amenities">Amenities</a>
-  <a href="#features">Features</a>
-  <a href="#contact">Contact</a>
+  <a href="#features">Smart Features</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#contact">Contact Us</a>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-slider">
     <img src="./images/bg/hero1.jpg" class="hero-img active" />
     <img src="./images/bg/hero2.jpg" class="hero-img" />
     <img src="./images/bg/hero3.jpg" class="hero-img" />
   </div>
-
   <div class="hero-overlay">
     <div class="hero-content">
-      <h1>The Zirk</h1>
-      <p>Smart Luxury 3 & 3+Servant BHK Apartments – Zirakpur</p>
-      <button onclick="scrollToContact()">Schedule Site Visit</button>
+      <span class="badge">Ready To Move & Under Construction</span>
+      <h1>Experience The <br><span class="gold-text">Pinnacle of Luxury</span></h1>
+      <p>Smart 3 & 3+Servant BHK Apartments in Zirakpur.</p>
+      <button class="cta-main" onclick="scrollToContact()">Schedule Site Visit</button>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <h2>Get In Touch</h2>
-    <p>Phone: +91 79018-10050</p>
-
-    <form 
-  class="contact-form"
-  action="https://script.google.com/macros/s/AKfycbyA7Vqy0PXpA0r3kiLCV2M_tUaQpCYQXD3rcWjpgobzTg2mVDkdR1tZfeABuOMbGQMtvA/exec"
-  method="POST"
-  target="hidden_iframe"
-  onsubmit="showThankYou()"
->
-  <input type="text" id="nameInput" name="name" placeholder="Full Name" required />
-  <input type="tel" name="phone" placeholder="Phone Number" required />
-  <input type="tel" name="whatsapp" placeholder="WhatsApp Number" required />
-
-  <button type="submit">Request Call Back</button>
-</form>
-
-<!-- Hidden iframe -->
-<iframe name="hidden_iframe" style="display:none;"></iframe>
-
-
-  </div>
-</section>
-
-<!-- OVERVIEW -->
 <section class="overview" id="overview">
   <div class="container">
-    <h2>The Zirk Project</h2>
-    <p>
-      Premium smart-living residences with modern architecture, automation,
-      and world-class amenities in Zirakpur.
-    </p>
-
+    <div class="section-title">
+      <h2>Project Overview</h2>
+      <div class="title-line"></div>
+    </div>
+    <p class="section-desc">Premium smart-living residences featuring world-class architecture, integrated home automation, and 4 acres of lush green surroundings.</p>
+    
     <div class="overview-stats">
-      <div><h3>3 & 3+Servant</h3><span>BHK Homes</span></div>
-      <div><h3>4 Acres</h3><span>Green Living</span></div>
-      <div><h3>Prime</h3><span>Location</span></div>
+      <div class="stat-card"><h3>3 & 3+S</h3><p>BHK Residences</p></div>
+      <div class="stat-card"><h3>4 Acres</h3><p>Lush Greenery</p></div>
+      <div class="stat-card"><h3>G+32</h3><p>Sky High Living</p></div>
+      <div class="stat-card"><h3>65K</h3><p>Sq. Ft. Clubhouse</p></div>
     </div>
   </div>
 </section>
 
-<!-- FLOOR PLANS -->
 <section class="floor-plans" id="plans">
   <div class="container">
-    <h2>House Plans</h2>
-
-    <div class="plan-card">
-      <img src="./images/plans/3bhk.jpg" />
-      <h3>3 BHK Flats</h3>
-      <p>Area: 1750 – 1990 Sq.Ft.</p>
-      <p>Structure: G+32</p>
-      <button  onclick="openWhatsApp()">Price & More Details</button>
+    <div class="section-title">
+      <h2>Exclusive Floor Plans</h2>
+      <div class="title-line"></div>
     </div>
-
-    <div class="plan-card">
-      <img src="./images/plans/3servant.jpg" />
-      <h3>3 BHK + Servant Room</h3>
-      <p>Area: 2290 Sq.Ft.</p>
-      <p>Structure: G+32</p>
-      
-      <button  onclick="openWhatsApp()">Price & More Details</button>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-img-container"><img src="./images/plans/3bhk.jpg" /></div>
+        <div class="plan-info">
+          <h3>3 BHK Executive</h3>
+          <p>Area: 1750 – 1990 Sq.Ft.</p>
+          <button class="btn-outline" onclick="openWhatsApp()">Check Pricing</button>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-img-container"><img src="./images/plans/3servant.jpg" /></div>
+        <div class="plan-info">
+          <h3>3 BHK + Servant</h3>
+          <p>Area: 2290 Sq.Ft.</p>
+          <button class="btn-outline" onclick="openWhatsApp()">Check Pricing</button>
+        </div>
+      </div>
     </div>
-
   </div>
 </section>
 
-<!-- AMENITIES POINTS -->
-<section class="amenities-points" id="amenities">
+<section class="amenities" id="amenities">
   <div class="container">
-    <h2>Amenities</h2>
-
-    <ul class="amenities-list">
-      <li>65,000 Sq.Ft. Club House</li>
-      <li>World Class Luxury Spa</li>
-      <li>EV Charging Stations</li>
-      <li>All Weather Swimming Pool</li>
-      <li>Multipurpose Party Hall</li>
-    </ul>
+    <div class="amenity-flex">
+      <div class="amenity-text">
+        <div class="section-title" style="text-align: left;">
+          <h2>World Class <br>Amenities</h2>
+        </div>
+        <ul class="amenity-items">
+          <li><span class="material-icons gold-icon">check_circle</span> 65,000 Sq.Ft. Grand Club House</li>
+          <li><span class="material-icons gold-icon">pool</span> All Weather Infinity Pool</li>
+          <li><span class="material-icons gold-icon">fitness_center</span> High-Tech Fitness Centre & Spa</li>
+          <li><span class="material-icons gold-icon">ev_station</span> EV Charging Infrastructure</li>
+          <li><span class="material-icons gold-icon">sports_tennis</span> Multipurpose Sports Courts</li>
+        </ul>
+      </div>
+      <div class="amenity-gallery">
+        <div class="amenities-slider">
+          <img src="./images/amenities/a1.jpg" class="amenity-img active" />
+          <img src="./images/amenities/a2.jpg" class="amenity-img" />
+          <img src="./images/amenities/a3.jpg" class="amenity-img" />
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- AMENITIES IMAGE SLIDER -->
-<section class="amenities-slider">
-  <img src="./images/amenities/a1.jpg" class="amenity-img active" />
-  <img src="./images/amenities/a2.jpg" class="amenity-img" />
-  <img src="./images/amenities/a3.jpg" class="amenity-img" />
-  <img src="./images/amenities/a4.jpg" class="amenity-img" />
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-title">
+      <h2>Resident Experiences</h2>
+      <div class="title-line"></div>
+    </div>
+    <div class="testimonial-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"The automation features are a game changer. The Zirk is truly the most premium project on the airport road."</p>
+        <h4>- Rajesh Verma, Business Owner</h4>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Greenery and open spaces were my priority. The Zirk delivered exactly that with excellent construction quality."</p>
+        <h4>- Dr. Anjali Mehta</h4>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"A secure and luxurious environment for my family. The clubhouse amenities are comparable to 5-star hotels."</p>
+        <h4>- Capt. Singh (Retd.)</h4>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- FEATURES -->
 <section class="features" id="features">
   <div class="container">
-    <h2>Smart Living Features</h2>
-
-    <div class="features-list">
+    <div class="section-title">
+      <h2>Smart Home Technology</h2>
+      <div class="title-line"></div>
+    </div>
+    <div class="features-grid">
       <div class="feature-card">
+        <span class="material-icons feature-icon">mic</span>
         <h4>Voice Control</h4>
-        <p>Control lights and appliances with voice commands.</p>
+        <p>Manage your luxury suite via Alexa or Google Home.</p>
       </div>
-
       <div class="feature-card">
-        <h4>Motion Sensors</h4>
-        <p>Smart lighting & security with motion detection.</p>
+        <span class="material-icons feature-icon">security</span>
+        <h4>Advanced Security</h4>
+        <p>Smart locks and motion sensors for total peace of mind.</p>
       </div>
-
       <div class="feature-card">
+        <span class="material-icons feature-icon">smartphone</span>
         <h4>Mobile App</h4>
-        <p>Control your home from anywhere using the app.</p>
+        <p>Control lighting and climate from anywhere in the world.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
-    <h2>Get In Touch</h2>
-    <p>Phone: +91 79018-10050</p>
-
-  <form 
-  class="contact-form"
-  action="https://script.google.com/macros/s/AKfycbyA7Vqy0PXpA0r3kiLCV2M_tUaQpCYQXD3rcWjpgobzTg2mVDkdR1tZfeABuOMbGQMtvA/exec"
-  method="POST"
-  target="hidden_iframe"
-  onsubmit="showThankYou()"
->
-  <input type="text" name="name" placeholder="Full Name" required />
-  <input type="tel" name="phone" placeholder="Phone Number" required />
-  <input type="tel" name="whatsapp" placeholder="WhatsApp Number" required />
-
-  <button type="submit">Request Call Back</button>
-</form>
-
-<!-- Hidden iframe -->
-<iframe name="hidden_iframe" style="display:none;"></iframe>
-
-
+    <div class="contact-box">
+      <div class="section-title">
+        <h2>Request a Private Tour</h2>
+        <p>Connect with our relationship manager</p>
+      </div>
+      <form class="contact-form" action="https://script.google.com/macros/s/AKfycbyA7Vqy0PXpA0r3kiLCV2M_tUaQpCYQXD3rcWjpgobzTg2mVDkdR1tZfeABuOMbGQMtvA/exec" method="POST" target="hidden_iframe" onsubmit="showThankYou()">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="tel" name="whatsapp" placeholder="WhatsApp Number (Optional)" />
+        <button type="submit" class="cta-submit">Request Call Back</button>
+      </form>
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
-  <p>© 2026 The Zirk. All Rights Reserved.</p>
+  <div class="trust-bar">
+    <div class="container trust-flex">
+      <div class="trust-item">
+        <span class="material-icons">verified_user</span>
+        <span>RERA Registered: <br><strong>PBRERA-SAS79-PR0593</strong></span>
+      </div>
+      <div class="trust-item">
+        <span class="material-icons">apartment</span>
+        <span>Urban Prism <br><strong>Developers</strong></span>
+      </div>
+      <div class="trust-item">
+        <span class="material-icons">location_on</span>
+        <span>Airport Road, <br><strong>Zirakpur</strong></span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2026 The Zirk Zirakpur. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>

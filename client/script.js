@@ -1,67 +1,78 @@
-// Hero Slider
-const images = document.querySelectorAll(".hero-img");
-let index = 0;
+// --- HERO SLIDER ---
+const heroImages = document.querySelectorAll(".hero-img");
+let heroIndex = 0;
 
 setInterval(() => {
-  images[index].classList.remove("active");
-  index = (index + 1) % images.length;
-  images[index].classList.add("active");
+  if(heroImages.length > 0) {
+    heroImages[heroIndex].classList.remove("active");
+    heroIndex = (heroIndex + 1) % heroImages.length;
+    heroImages[heroIndex].classList.add("active");
+  }
 }, 5000);
 
-// Amenities Slider
+// --- AMENITIES SLIDER ---
 const amenityImages = document.querySelectorAll(".amenity-img");
-let aIndex = 0;
+let amenityIndex = 0;
 
 setInterval(() => {
-  amenityImages[aIndex].classList.remove("active");
-  aIndex = (aIndex + 1) % amenityImages.length;
-  amenityImages[aIndex].classList.add("active");
-}, 2000);
+  if(amenityImages.length > 0) {
+    amenityImages[amenityIndex].classList.remove("active");
+    amenityIndex = (amenityIndex + 1) % amenityImages.length;
+    amenityImages[amenityIndex].classList.add("active");
+  }
+}, 3000);
 
-// Menu Toggle
+// --- MOBILE MENU ---
 const menuBtn = document.getElementById("menuBtn");
 const dropdownMenu = document.getElementById("dropdownMenu");
 
 menuBtn.addEventListener("click", () => {
   dropdownMenu.classList.toggle("show");
+  // Optional: Change icon or animate if desired
 });
+
+// Close menu when a link is clicked
+document.querySelectorAll(".dropdown-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    dropdownMenu.classList.remove("show");
+  });
+});
+
+// --- SMOOTH SCROLL ---
 function scrollToContact() {
   const section = document.getElementById("contact");
-  const nameInput = document.getElementById("nameInput");
-  const offset = 64;
+  if(section) {
+    const offset = 90; // Adjust for header height
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = section.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition - offset;
 
-  const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
-
-  window.scrollTo({ top: y, behavior: "smooth" });
-
-  setTimeout(() => {
-    if (nameInput) {
-      nameInput.focus();
-    }
-  }, 600);
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  }
 }
 
+// --- WHATSAPP LOGIC ---
 function openWhatsApp() {
   window.open(
-    "https://api.whatsapp.com/send?phone=917901810050&text=Can%20I%20know%20more%20about%20The%20Zirk%20project%3F",
+    "https://api.whatsapp.com/send?phone=917901810050&text=I%20am%20interested%20in%20The%20Zirk.%20Please%20share%20price%20list%20and%20availability.",
     "_blank"
   );
 }
 
-
-
-
+// --- FORM HANDLING ---
 function showThankYou() {
+  // Wait a moment for form to submit to hidden iframe
   setTimeout(() => {
     document.getElementById("thankYouPopup").style.display = "flex";
-     const forms = document.querySelectorAll(".contact-form");
+    const forms = document.querySelectorAll(".contact-form");
     forms.forEach(form => form.reset());
-  }, 500);
+  }, 1000);
 }
 
 function closePopup() {
   document.getElementById("thankYouPopup").style.display = "none";
 }
-
-
-
