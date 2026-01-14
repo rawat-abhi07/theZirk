@@ -41,6 +41,12 @@ function scrollToContact() {
   }, 600);
 }
 
+function openWhatsApp() {
+  window.open(
+    "https://api.whatsapp.com/send?phone=917901810050&text=Can%20I%20know%20more%20about%20The%20Zirk%20project%3F",
+    "_blank"
+  );
+}
 
 
 
