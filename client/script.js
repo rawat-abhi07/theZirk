@@ -76,3 +76,23 @@ function showThankYou() {
 function closePopup() {
   document.getElementById("thankYouPopup").style.display = "none";
 }
+
+let currentIdx = 0;
+const wrapper = document.getElementById('galleryWrapper');
+const totalImages = document.querySelectorAll('.gallery-wrapper img').length;
+
+function updateGallery() {
+    wrapper.style.transform = `translateX(-${currentIdx * 100}%)`;
+}
+
+function moveGallery(step) {
+    currentIdx += step;
+    if (currentIdx >= totalImages) currentIdx = 0;
+    if (currentIdx < 0) currentIdx = totalImages - 1;
+    updateGallery();
+}
+
+// Auto Loop every 4 seconds
+setInterval(() => {
+    moveGallery(1);
+}, 3000);

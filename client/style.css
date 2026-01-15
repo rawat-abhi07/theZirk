@@ -178,6 +178,58 @@ section { padding: 50px 0; }
 }
 .btn-outline:hover { background: var(--gold); color: #fff; }
 
+
+
+/* --- GALLERY STYLES --- */
+.gallery-section { background: var(--white); padding: 20px 0; }
+
+.gallery-container {
+  position: relative;
+  max-width: 800px; /* Fitting your 768px images nicely */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+}
+
+.gallery-wrapper {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-wrapper img {
+  width: 100%;
+  flex-shrink: 0;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* Navigation Buttons */
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.gallery-nav:hover { background: var(--gold); }
+.prev { left: 0; border-radius: 0 4px 4px 0; }
+.next { right: 0; border-radius: 4px 0 0 4px; }
+
+@media (max-width: 768px) {
+  .gallery-container { width: 100%; border-radius: 0; }
+  .gallery-nav { padding: 10px 15px; font-size: 16px; }
+}
+
+
 /* --- AMENITIES --- */
 .amenities { background: var(--white); }
 .amenity-items { list-style: none; margin-top: 0px; }
@@ -304,10 +356,10 @@ section { padding: 50px 0; }
 
 .whatsapp-chat { position: fixed; bottom: 30px; right: 20px; z-index: 999; display: flex; align-items: center; gap: 10px; }
 .chat-bubble { background: var(--white); color: var(--dark); padding: 10px 20px; border-radius: 50px; font-weight: 600; box-shadow: 0 8px 15px rgba(0,0,0,0.1); font-size: 13px; }
-.whatsapp-btn { width: 55px; height: 55px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; box-shadow: 0 8px 15px rgba(37, 211, 102, 0.4); }
-.whatsapp-btn img { width: 30px; }
+.whatsapp-btn { width: 50px; height: 50px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; box-shadow: 0 8px 15px rgba(37, 211, 102, 0.4); }
+.whatsapp-btn img { width: 50px; }
 
-.dropdown-menu { position: fixed; top: 60px; right: 0; width: 100%; background: var(--white); display: none; flex-direction: column; z-index: 2000; border-bottom: 3px solid var(--gold); }
+.dropdown-menu { position: fixed; top: 70px; right: 0; width: 100%; background: var(--white); display: none; flex-direction: column; z-index: 2000; border-bottom: 3px solid var(--gold); }
 .dropdown-menu a { padding: 15px; text-align: center; text-decoration: none; color: var(--dark); border-bottom: 1px solid #f0f0f0; font-size: 15px; }
 .dropdown-menu.show { display: flex; animation: slideDown 0.3s ease; }
 @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
@@ -322,8 +374,8 @@ section { padding: 50px 0; }
   .logo-img { height: 40px; }
   .phone-link-header img { width: 31px; height: 31px; }
   .phone-text-header { display: none !important; } /* Hide number in header for space */
-  .menu-btn img { width: 48px; }
-
+  .menu-btn img { width: 62px; }
+  .dropdown-menu { position: fixed; top: 45px; }
   /* Ensure contact section phone link doesn't wrap */
   .contact .section-title .contact-phone-link {
     flex-wrap: nowrap;
