@@ -28,13 +28,11 @@
 <header class="header">
   <div class="container header-flex">
     <img src="./images/logo/logo.png" class="logo-img" alt="The Zirk Logo" />
-    
     <div class="header-actions">
-      <a href="tel:+917901810050" class="phone-link" aria-label="Call Now">
+      <a href="tel:+917901810050" class="phone-link-header" aria-label="Call Now">
         <img src="./images/icons/phone.png" alt="Call" />
-        <span class="phone-text">+91 79018-10050</span>
+        <span class="phone-text-header">+91 79018-10050</span>
       </a>
-
       <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
         <img src="./images/icons/menu.png" alt="Menu" />
       </button>
@@ -46,9 +44,7 @@
   <a href="#home">Home</a>
   <a href="#overview">Overview</a>
   <a href="#plans">Floor Plans</a>
-  <a href="#amenities">Amenities</a>
-  <a href="#features">Smart Features</a>
-  <a href="#testimonials">Reviews</a>
+  <a href="#amenities">Amenities & Features</a>
   <a href="#contact">Contact Us</a>
 </div>
 
@@ -67,7 +63,26 @@
     </div>
   </div>
 </section>
-
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <div class="section-title">
+        <h2>Get In Touch</h2>
+        <div class="contact-phone-wrap">
+          <span class="contact-label">Phone:</span>
+          <a href="tel:+917901810050" class="contact-phone-link">+91 79018-10050</a>
+        </div>
+      </div>
+      <form class="contact-form" action="https://script.google.com/macros/s/AKfycbyA7Vqy0PXpA0r3kiLCV2M_tUaQpCYQXD3rcWjpgobzTg2mVDkdR1tZfeABuOMbGQMtvA/exec" method="POST" target="hidden_iframe" onsubmit="showThankYou()">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="tel" name="whatsapp" placeholder="WhatsApp Number (Optional)" />
+        <button type="submit" class="cta-submit">Request Call Back</button>
+      </form>
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+    </div>
+  </div>
+</section>
 <section class="overview" id="overview">
   <div class="container">
     <div class="section-title">
@@ -93,15 +108,31 @@
     </div>
     <div class="plans-grid">
       <div class="plan-card">
-        <div class="plan-img-container"><img src="./images/plans/3bhk.jpg" /></div>
+        <div class="plan-img-container"><img src="./images/plans/3bhk1750.png" /></div>
         <div class="plan-info">
-          <h3>3 BHK Executive</h3>
-          <p>Area: 1750 – 1990 Sq.Ft.</p>
+          <h3>3 BHK </h3>
+          <p>Area: 1750  Sq.Ft.</p>
           <button class="btn-outline" onclick="openWhatsApp()">Check Pricing</button>
         </div>
       </div>
       <div class="plan-card">
-        <div class="plan-img-container"><img src="./images/plans/3servant.jpg" /></div>
+        <div class="plan-img-container"><img src="./images/plans/3bhk1900.png" /></div>
+        <div class="plan-info">
+          <h3>3 BHK Executive</h3>
+          <p>Area: 1900 Sq.Ft.</p>
+          <button class="btn-outline" onclick="openWhatsApp()">Check Pricing</button>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-img-container"><img src="./images/plans/3bhk1990.png" /></div>
+        <div class="plan-info">
+          <h3>3 BHK Premium</h3>
+          <p>Area: 1990 Sq.Ft.</p>
+          <button class="btn-outline" onclick="openWhatsApp()">Check Pricing</button>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-img-container"><img src="./images/plans/3bhk+1.png" /></div>
         <div class="plan-info">
           <h3>3 BHK + Servant</h3>
           <p>Area: 2290 Sq.Ft.</p>
@@ -114,78 +145,52 @@
 
 <section class="amenities" id="amenities">
   <div class="container">
-    <div class="amenity-flex">
-      <div class="amenity-text">
-        <div class="section-title" style="text-align: left;">
-          <h2>World Class <br>Amenities</h2>
-        </div>
-        <ul class="amenity-items">
-          <li><span class="material-icons gold-icon">check_circle</span> 65,000 Sq.Ft. Grand Club House</li>
-          <li><span class="material-icons gold-icon">pool</span> All Weather Infinity Pool</li>
-          <li><span class="material-icons gold-icon">fitness_center</span> High-Tech Fitness Centre & Spa</li>
-          <li><span class="material-icons gold-icon">ev_station</span> EV Charging Infrastructure</li>
-          <li><span class="material-icons gold-icon">sports_tennis</span> Multipurpose Sports Courts</li>
-        </ul>
-      </div>
-      <div class="amenity-gallery">
-        <div class="amenities-slider">
-          <img src="./images/amenities/a1.jpg" class="amenity-img active" />
-          <img src="./images/amenities/a2.jpg" class="amenity-img" />
-          <img src="./images/amenities/a3.jpg" class="amenity-img" />
-        </div>
-      </div>
+    <div class="section-title">
+      <h2>Amenities & Smart Features</h2>
+      <div class="title-line"></div>
+    </div>
+    <div class="amenity-text">
+      <ul class="amenity-items">
+        <li><span class="material-icons gold-icon">check_circle</span> 65,000 Sq.Ft. Club House</li>
+        <li><span class="material-icons gold-icon">fitness_center</span> High-Tech Fitness Centre</li>
+        <li><span class="material-icons gold-icon">restaurant</span> Restaurant & Coffee House</li>
+        <li><span class="material-icons gold-icon">theaters</span> In House Mini Theatre</li>
+        <li><span class="material-icons gold-icon">hot_tub</span> Sauna & Steam Bath</li>
+        <li><span class="material-icons gold-icon">self_improvement</span> Yoga Meditation Center</li>
+        <li><span class="material-icons gold-icon">pool</span> All Weather Infinity Pool</li>
+        <li><span class="material-icons gold-icon">mic</span> Voice Control (Alexa/Google)</li>
+        <li><span class="material-icons gold-icon">lightbulb</span> Smart Light Control</li>
+        <li><span class="material-icons gold-icon">thermostat</span> AC & Temperature Control</li>
+        <li><span class="material-icons gold-icon">admin_panel_settings</span> Access & Security Control</li>
+        <li><span class="material-icons gold-icon">schedule</span> Time Based Event Control</li>
+        <li><span class="material-icons gold-icon">sensors</span> Presence & Motion Sensors</li>
+        <li><span class="material-icons gold-icon">touch_app</span> Touch Panels & Motion Apps</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- <section class="testimonials" id="testimonials">
+<section class="location" id="location">
   <div class="container">
     <div class="section-title">
-      <h2>Resident Experiences</h2>
+      <h2>Prime Location Advantages</h2>
       <div class="title-line"></div>
     </div>
-    <div class="testimonial-grid">
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>"The automation features are a game changer. The Zirk is truly the most premium project on the airport road."</p>
-        <h4>- Rajesh Verma, Business Owner</h4>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>"Greenery and open spaces were my priority. The Zirk delivered exactly that with excellent construction quality."</p>
-        <h4>- Dr. Anjali Mehta</h4>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>"A secure and luxurious environment for my family. The clubhouse amenities are comparable to 5-star hotels."</p>
-        <h4>- Capt. Singh (Retd.)</h4>
-      </div>
+    <h3 class="location-subgroup">Quick Access Hubs</h3>
+    <div class="location-grid">
+      <div class="location-item"><span class="material-icons loc-icon">shopping_bag</span><div class="loc-details"><span class="loc-name">DMART</span><span class="loc-time">- 01 Min</span></div></div>
+      <div class="location-item"><span class="material-icons loc-icon">storefront</span><div class="loc-details"><span class="loc-name">HLP Social Square</span><span class="loc-time">- 02 Min</span></div></div>
+      <div class="location-item"><span class="material-icons loc-icon">bakery_dining</span><div class="loc-details"><span class="loc-name">Gopal Sweets</span><span class="loc-time">- 02 Min</span></div></div>
+      <div class="location-item"><span class="material-icons loc-icon">sports_tennis</span><div class="loc-details"><span class="loc-name">DECATHLON</span><span class="loc-time">- 05 Min</span></div></div>
+      <div class="location-item"><span class="material-icons loc-icon">restaurant</span><div class="loc-details"><span class="loc-name">MCD / KFC</span><span class="loc-time">- 05 Min</span></div></div>
+      <div class="location-item"><span class="material-icons loc-icon">directions_car</span><div class="loc-details"><span class="loc-name">VIP Road</span><span class="loc-time">- 05 Min</span></div></div>
     </div>
-  </div>
-</section> -->
-
-<section class="features" id="features">
-  <div class="container">
-    <div class="section-title">
-      <h2>Smart Home Technology</h2>
-      <div class="title-line"></div>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <span class="material-icons feature-icon">mic</span>
-        <h4>Voice Control</h4>
-        <p>Manage your luxury suite via Alexa or Google Home.</p>
-      </div>
-      <div class="feature-card">
-        <span class="material-icons feature-icon">security</span>
-        <h4>Advanced Security</h4>
-        <p>Smart locks and motion sensors for total peace of mind.</p>
-      </div>
-      <div class="feature-card">
-        <span class="material-icons feature-icon">smartphone</span>
-        <h4>Mobile App</h4>
-        <p>Control lighting and climate from anywhere in the world.</p>
-      </div>
+    <h3 class="location-subgroup">Major Connectivity</h3>
+    <div class="location-grid">
+      <div class="location-item highlight-card"><span class="material-icons loc-icon">flight_takeoff</span><div class="loc-details"><span class="loc-name">Mohali Int. Airport</span><span class="loc-time">- 10 Min</span></div></div>
+      <div class="location-item"><span class="material-icons loc-icon">apartment</span><div class="loc-details"><span class="loc-name">IT City & Aero City</span><span class="loc-time">- 10 Min</span></div></div>
+      <div class="location-item"><span class="material-icons loc-icon">local_mall</span><div class="loc-details"><span class="loc-name">Elante Mall</span><span class="loc-time">- 10 Min</span></div></div>
+      <div class="location-item"><span class="material-icons loc-icon">school</span><div class="loc-details"><span class="loc-name">Amity University</span><span class="loc-time">- 05 Min</span></div></div>
     </div>
   </div>
 </section>
@@ -194,8 +199,11 @@
   <div class="container">
     <div class="contact-box">
       <div class="section-title">
-        <h2>Request a Private Tour</h2>
-        <p>Connect with our relationship manager</p>
+        <h2>Get In Touch</h2>
+        <div class="contact-phone-wrap">
+          <span class="contact-label">Phone:</span>
+          <a href="tel:+917901810050" class="contact-phone-link">+91 79018-10050</a>
+        </div>
       </div>
       <form class="contact-form" action="https://script.google.com/macros/s/AKfycbyA7Vqy0PXpA0r3kiLCV2M_tUaQpCYQXD3rcWjpgobzTg2mVDkdR1tZfeABuOMbGQMtvA/exec" method="POST" target="hidden_iframe" onsubmit="showThankYou()">
         <input type="text" name="name" placeholder="Full Name" required />
@@ -211,27 +219,13 @@
 <footer class="footer">
   <div class="trust-bar">
     <div class="container trust-flex">
-      <div class="trust-item">
-        <span class="material-icons">verified_user</span>
-        <span>RERA Registered: <br><strong>PBRERA-SAS79-PR0593</strong></span>
-      </div>
-      <div class="trust-item">
-        <span class="material-icons">apartment</span>
-        <span>Urban Prism <br><strong>Developers</strong></span>
-      </div>
-      <div class="trust-item">
-        <span class="material-icons">location_on</span>
-        <span>Airport Road, <br><strong>Zirakpur</strong></span>
-      </div>
+      <div class="trust-item"><span class="material-icons">verified_user</span><span>RERA Registered: <br><strong>PBRERA-SAS79-PR0593</strong></span></div>
+      <div class="trust-item"><span class="material-icons">apartment</span><span>Urban Prism <br><strong>Developers</strong></span></div>
+      <div class="trust-item"><span class="material-icons">location_on</span><span>Airport Road, <br><strong>Zirakpur</strong></span></div>
     </div>
   </div>
-  
   <div class="footer-bottom">
     <p>© 2026 The Zirk Zirakpur. All Rights Reserved.</p>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-    </div>
   </div>
 </footer>
 
