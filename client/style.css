@@ -50,7 +50,27 @@ body {
   align-items: center; 
   width: 100%;
 }
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between logo and text */
+}
 
+/* .logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+} */
+.logo-text {
+  color: var(--gold); /* Matches the gold text in your hero h1 */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 32px;
+}
 .logo-img { 
   height: 50px; 
   width: auto;
@@ -88,7 +108,7 @@ body {
 }
 
 .menu-btn img { 
-  width: 32px; 
+  width: 62px; 
   height: auto;
 }
 
@@ -371,6 +391,13 @@ section { padding: 50px 0; }
   
   /* Standard icon sizes for mobile header */
   .header { height: 45px; }
+  .logo-wrap {
+    gap: 8px;
+  }
+  .logo-text {
+    font-size: 20px; /* Smaller text for mobile screens */
+  }
+  
   .logo-img { height: 40px; }
   .phone-link-header img { width: 31px; height: 31px; }
   .phone-text-header { display: none !important; } /* Hide number in header for space */
@@ -392,6 +419,20 @@ section { padding: 50px 0; }
   .location-grid { grid-template-columns: 1fr; gap: 5px; }
   .trust-flex { flex-direction: column; align-items: flex-start; padding-left: 20px; }
   .section-title h2 { font-size: 26px; }
+  .plan-card .btn-outline {
+    background-color: var(--gold); /* Solid Gold background */
+    color: #ffffff;               /* Clean white text */
+    border: none;                 /* Remove border for solid look */
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(191, 160, 90, 0.3); /* Subtle depth */
+    opacity: 1;                   /* Ensure it is fully visible */
+  }
+
+  /* Active feedback when touched */
+  .plan-card .btn-outline:active {
+    background-color: var(--gold-dark); /* Darkens slightly when pressed */
+    transform: scale(0.97);            /* Pressed effect */
+  }
 }
 
 @media (max-width: 480px) {
